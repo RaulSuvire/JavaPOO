@@ -10,8 +10,8 @@ package Entidades;
  * @author Raul
  */
 public class Cafetera {
-    private int capacidadMaxima;
-    private int cantidadActual;
+    private int capacidadMaxima = 2000;
+    private int cantidadActual = 0;
 
     public Cafetera() {
     }
@@ -42,11 +42,14 @@ public class Cafetera {
     }
     
     public void servirTaza(int taza){
+        System.out.println("Quiere servir "+taza+" de cafe");
         if (getCantidadActual() >= taza) {
             setCantidadActual(getCantidadActual()-taza);
             System.out.println("Se llenó la taza");
+            System.out.println("Queda "+getCantidadActual()+" de cafe");
         } else {
-            System.out.println("La taza quedó con: " + (taza - getCantidadActual()));
+            System.out.println("La taza quedó con: " + getCantidadActual());
+            System.out.println("Falta para llenar: " + (taza - getCantidadActual()));
             setCantidadActual(0);
         }
     }
@@ -59,8 +62,8 @@ public class Cafetera {
         if (getCantidadActual()+cafe <= getCapacidadMaxima()) {
             setCantidadActual(getCantidadActual()+cafe);
         } else {
+            System.out.println("Se pasó el límite, sobra: " + ((getCantidadActual()+cafe) - getCapacidadMaxima()));
             llenarCafetera();
-            System.out.println("Se pasó el límite, sobra: " + (getCantidadActual()+cafe - getCapacidadMaxima()));
         }
     }
 
