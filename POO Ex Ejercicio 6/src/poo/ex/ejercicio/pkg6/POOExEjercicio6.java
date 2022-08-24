@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.ex.ejercicio.pkg3;
+package poo.ex.ejercicio.pkg6;
 
-import Service.RaicesService;
+import Service.AhoracadoService;
 
 /**
  *
  * @author Raul
  */
-public class POOExEjercicio3 {
+public class POOExEjercicio6 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        RaicesService rs = new RaicesService();
-        rs.crearEcuacion();
-        rs.calcular();
+        AhoracadoService as = new AhoracadoService();
+        as.crearJuego();
+        as.juego();
     }
     
 }

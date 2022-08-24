@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.ex.ejercicio.pkg3;
+package poo.ex.ejercicio.pkg4;
 
-import Service.RaicesService;
+import Service.NifService;
 
 /**
  *
  * @author Raul
  */
-public class POOExEjercicio3 {
+public class POOExEjercicio4 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        RaicesService rs = new RaicesService();
-        rs.crearEcuacion();
-        rs.calcular();
+        NifService nf = new NifService();
+        nf.crearNif();
+        nf.mostrar();
     }
     
 }

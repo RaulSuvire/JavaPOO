@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.ex.ejercicio.pkg3;
+package poo.ex.ejercicio.pkg5;
 
-import Service.RaicesService;
+import Entidades.MesSecreto;
 
 /**
  *
  * @author Raul
  */
-public class POOExEjercicio3 {
+public class POOExEjercicio5 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        RaicesService rs = new RaicesService();
-        rs.crearEcuacion();
-        rs.calcular();
+        MesSecreto ms = new MesSecreto();
+        ms.adivinarMesSecreto();
     }
     
 }

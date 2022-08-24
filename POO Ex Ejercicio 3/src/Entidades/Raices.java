@@ -46,5 +46,10 @@ public class Raices {
     public void setC(int c) {
         this.c = c;
     }
+
+    @Override
+    public String toString() {
+        return "Raices{" + "a=" + a + ", b=" + b + ", c=" + c + '}';
+    }
     
 }

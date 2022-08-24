@@ -26,7 +26,7 @@ public class RaicesService {
         r = new Raices(a,b,c);
     }
     public double getDiscriminante(){
-        return (r.getB()^2)-4*r.getA()*r.getC();
+        return (Math.pow(r.getB(),2))-(4*r.getA()*r.getC());
     }
     public boolean tieneRaices(){
         return getDiscriminante() >= 0;
@@ -36,16 +36,28 @@ public class RaicesService {
     }
     public void obtenerRaices(){
         if (tieneRaices()) {
-            calcular();
+            double x1 = (-(r.getB()) + Math.sqrt(getDiscriminante())) / (2*r.getA());
+            double x2 = (-(r.getB()) - Math.sqrt(getDiscriminante())) / (2*r.getA());
+            System.out.println("Las raices son: \n x1 : " + x1 + "\n x2 : " + x2);
         }
     }
     public void obtenerRaiz(){
         if (tieneRaiz()) {
-            calcular();
+            double x = -(r.getB())/ (2*r.getA());
+            System.out.println("La raiz es: \n x : " + x);
         }
     }
 
-    private void calcular() {
-        
+    public void calcular() {
+        if (tieneRaiz()) {
+            obtenerRaiz();
+        } else {
+            if (tieneRaices()) {
+                obtenerRaices();
+            } else {
+                System.out.println("No tiene solución");
+            }
+        }
+ 
     }
 }
